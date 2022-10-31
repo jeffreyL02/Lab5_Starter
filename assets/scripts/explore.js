@@ -30,7 +30,7 @@ function init() {
   submitbtn.addEventListener('click', () => {
     let utterThis = new SpeechSynthesisUtterance(textbox.value);
     utterThis.addEventListener('end', () => {    
-      document.getElementsByTagName('img')[0].src = '../assets/images/smiling.png';
+      document.getElementsByTagName('img')[0].src = 'assets/images/smiling.png';
     });
     let selectedOption = document.getElementById('voice-select').selectedOptions[0].getAttribute('data-name');
     for (let i = 0; i < voices.length ; i++) {
@@ -39,7 +39,7 @@ function init() {
       }
     }
     synth.speak(utterThis);
-    document.getElementsByTagName('img')[0].src = '../assets/images/smiling-open.png'; 
+    document.getElementsByTagName('img')[0].src = 'assets/images/smiling-open.png'; 
   });
 
 
